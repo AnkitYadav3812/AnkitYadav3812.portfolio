@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="style.css"/>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <style>
-    /* Fallback styles in case style.css fails to load */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background: #0a0e27; color: #e0e0e0; }
   </style>
@@ -546,41 +545,34 @@
     </div>
     <div class="cert-layout">
 
-      <!-- IBM Build an AI Agent — Hero Cert -->
+      <!-- IBM GenAI Cert -->
       <div class="cert-hero reveal-up">
         <div class="ch-glow"></div>
-
         <div class="ch-left">
           <div class="ch-badge"><span>🧠</span></div>
           <div class="ch-ribbon">New</div>
         </div>
-
         <div class="ch-body">
           <div class="ch-meta">
             <span class="ch-issuer ibm-badge">IBM SkillsBuild + CSRBOX</span>
             <span class="ch-year">2026</span>
           </div>
-
           <h3>Generative AI: From Prompt to Production</h3>
-
           <p>
             Completed a 2-week intensive bootcamp covering end-to-end generative AI systems,
             from prompt engineering to production deployment, including LLM workflows,
             agent pipelines, and real-world AI applications.
           </p>
-
           <div class="ch-skills">
             <span>Generative AI</span>
             <span>Prompt Engineering</span>
             <span>LLMs</span>
             <span>AI Deployment</span>
           </div>
-
           <a href="./certificates/generative-ai-prompt-to-production.pdf" class="cc-link" target="_blank" rel="noopener noreferrer" download>
             View Certificate
           </a>
         </div>
-
         <div class="ch-right">
           <div class="ch-visual">
             <div class="ibm-logo-big">AI</div>
@@ -589,6 +581,7 @@
         </div>
       </div>
 
+      <!-- IBM AI Agent Cert -->
       <div class="cert-hero reveal-up">
         <div class="ch-glow"></div>
         <div class="ch-left">
@@ -720,33 +713,33 @@
         <div class="contact-card">
           <div class="cc-glow"></div>
           <h4>Send a Message</h4>
-          <div class="form-alert form-success" id="formSuccess" role="status" aria-live="polite">
+          <div class="form-alert form-success" id="formSuccess" role="status" aria-live="polite" style="display:none;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Message sent successfully! I'll get back to you soon.
           </div>
-          <div class="form-alert form-error" id="formError" role="status" aria-live="polite">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div class="form-alert form-error" id="formError" role="status" aria-live="polite" style="display:none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
             Something went wrong. Please try again or email directly.
           </div>
           <form id="contactForm" novalidate>
             <div class="form-group">
               <label for="from_name">Your Name</label>
               <input type="text" id="from_name" name="from_name" placeholder="John Doe" class="form-input" required aria-describedby="nameErr"/>
-              <span class="form-err-msg" id="nameErr" role="alert">Please enter your name.</span>
+              <span class="form-err-msg" id="nameErr" role="alert" style="display:none;">Please enter your name.</span>
             </div>
             <div class="form-group">
               <label for="reply_to">Email Address</label>
               <input type="email" id="reply_to" name="reply_to" placeholder="john@example.com" class="form-input" required aria-describedby="emailErr"/>
-              <span class="form-err-msg" id="emailErr" role="alert">Please enter a valid email.</span>
+              <span class="form-err-msg" id="emailErr" role="alert" style="display:none;">Please enter a valid email.</span>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
               <textarea id="message" name="message" placeholder="I'd like to discuss an AI/ML opportunity..." class="form-textarea" rows="4" required aria-describedby="msgErr"></textarea>
-              <span class="form-err-msg" id="msgErr" role="alert">Please enter a message.</span>
+              <span class="form-err-msg" id="msgErr" role="alert" style="display:none;">Please enter a message.</span>
             </div>
             <button type="submit" class="form-btn" id="submitBtn" aria-busy="false">
               <span id="btnText">Send Message</span>
-              <div class="btn-spinner" id="btnSpinner" aria-hidden="true"></div>
+              <div class="btn-spinner" id="btnSpinner" aria-hidden="true" style="display:none;"></div>
               <svg id="btnIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z"/></svg>
             </button>
           </form>
@@ -824,10 +817,8 @@ const ctx = canvas.getContext('2d');
 let nodes = [], W, H;
 let shouldAnimate = true;
 
-// Check for prefers-reduced-motion
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (prefersReducedMotion) {
-  // Disable animation for accessibility
   canvas.style.display = 'none';
   shouldAnimate = false;
 }
@@ -835,7 +826,6 @@ if (prefersReducedMotion) {
 function resize() {
   W = canvas.width = canvas.offsetWidth;
   H = canvas.height = canvas.offsetHeight;
-  // Limit nodes on smaller screens for performance
   const nodeCount = window.innerWidth < 768 ? 30 : 60;
   if (nodes.length === 0) {
     for (let i = 0; i < nodeCount; i++) {
@@ -946,6 +936,6 @@ const cObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 counters.forEach(c => cObserver.observe(c));
 
-/* ── SKILL BARS ── */
+/* ── SKILL BARS ANIMATION ── */
 const bars = document.querySelectorAll('.si-fill');
-const bOb
+const barObserver = new IntersectionObserver(
