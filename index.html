@@ -586,7 +586,7 @@
           <div class="cc-icon">🏅</div>
           <div class="cc-body">
             <div class="cc-meta">
-              <span class="cc-issuer">EY &amp; Microsoft</span>
+              <span class="cc-issuer">EY & Microsoft</span>
               <span class="cc-year">2024</span>
             </div>
             <h4>AI Skills Passport</h4>
@@ -614,7 +614,7 @@
           <div class="cc-icon">📊</div>
           <div class="cc-body">
             <div class="cc-meta">
-              <span class="cc-issuer">CSRBOX &amp; IBM</span>
+              <span class="cc-issuer">CSRBOX & IBM</span>
               <span class="cc-year">2025</span>
             </div>
             <h4>IBM SkillsBuild Winter Certification 2025</h4>
@@ -625,6 +625,22 @@
             </a>
           </div>
           <div class="cc-accent" style="--ca:#ff8c00"></div>
+        </div>
+        <div class="cert-card reveal-up" style="--delay:0.25s">
+          <div class="cc-icon">🤖</div>
+          <div class="cc-body">
+            <div class="cc-meta">
+              <span class="cc-issuer">CSRBOX & IBM SkillsBuild</span>
+              <span class="cc-year">2026</span>
+            </div>
+            <h4>Generative AI: From Prompt to Production</h4>
+            <p>2-week intensive IBM SkillsBuild Boot Camp covering generative AI, prompt engineering, and production deployment of AI models.</p>
+            <a href="Generative-AI-Certificate.pdf" class="cc-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              View Certificate
+            </a>
+          </div>
+          <div class="cc-accent" style="--ca:#00d4ff"></div>
         </div>
       </div>
     </div>
@@ -943,12 +959,4 @@ contactForm.addEventListener('submit', async (e) => {
 
 ['from_name', 'reply_to', 'message'].forEach(id => {
   document.getElementById(id).addEventListener('blur', () => {
-    if (id === 'from_name') validateField('from_name', 'nameErr',  v => v === '');
-    if (id === 'reply_to')  validateField('reply_to',  'emailErr', v => !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
-    if (id === 'message')   validateField('message',   'msgErr',   v => v === '');
-  });
-});
-</script>
-
-</body>
-</html>
+    if (id === 'from_name') validateField('from_name', 'nameErr',  v => v ===
