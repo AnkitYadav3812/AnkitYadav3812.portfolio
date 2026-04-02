@@ -1,443 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <meta name="description" content="Ankit Yadav — AI & ML Engineer Scientist. Building scalable ML systems, intelligent solutions, and production-grade pipelines."/>
-  <meta name="keywords" content="Ankit Yadav, AI Engineer, ML Scientist, Machine Learning, Deep Learning, TensorFlow, PyTorch, Neural Networks"/>
-  <meta property="og:title" content="Ankit Yadav | AI & ML Engineer Scientist"/>
-  <meta property="og:description" content="Building scalable ML systems and intelligent solutions for complex data problems."/>
-  <meta property="og:type" content="website"/>
-  <title>Ankit Yadav | AI & ML Engineer Scientist</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300d4ff'/><stop offset='100%25' stop-color='%237b2fff'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text y='.9em' font-size='55' font-family='Inter,sans-serif' font-weight='800' fill='white' x='50%25' text-anchor='middle' dominant-baseline='middle' dy='.1em'>AY</text></svg>"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  
-  <style>
-    :root {
-      --bg-0: #060912;
-      --bg-1: #0a0e1a;
-      --bg-2: #0d1225;
-      --bg-3: #101830;
-      --glass: rgba(13, 18, 37, 0.75);
-      --glass-border: rgba(255,255,255,0.06);
-      --glass-hover: rgba(16, 23, 50, 0.9);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ankit Yadav - AI & ML Engineer">
+    <title>Ankit Yadav | AI & ML Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      --blue: #00d4ff;
-      --purple: #7b2fff;
-      --green: #00ff88;
-      --orange: #ff8c00;
-      --pink: #ff2d78;
-      --ibm: #0091e6;
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #060912 0%, #0d1225 100%);
+            color: #f0f2ff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-      --blue-dim: rgba(0,212,255,0.08);
-      --purple-dim: rgba(123,47,255,0.08);
-      --green-dim: rgba(0,255,136,0.06);
+        html {
+            scroll-behavior: smooth;
+        }
 
-      --text-1: #f0f2ff;
-      --text-2: #8892b0;
-      --text-3: #4a5568;
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            background: rgba(6, 9, 18, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
 
-      --font-body: 'Inter', sans-serif;
-      --font-head: 'Space Grotesk', sans-serif;
-      --ease: cubic-bezier(0.4, 0, 0.2, 1);
-      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-      --max-w: 1240px;
-      --radius: 16px;
-      --radius-sm: 10px;
-      --radius-lg: 24px;
-    }
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #00d4ff;
+            text-decoration: none;
+        }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body {
-      font-family: var(--font-body);
-      background: var(--bg-0);
-      color: var(--text-1);
-      line-height: 1.7;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { text-decoration: none; color: inherit; }
-    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--bg-0); }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(var(--blue), var(--purple)); border-radius: 4px; }
+        nav a {
+            color: #8892b0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-    .cursor, .cursor-follower {
-      position: fixed;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: transform 0.1s var(--ease);
-    }
-    .cursor {
-      width: 8px; height: 8px;
-      background: var(--blue);
-      box-shadow: 0 0 10px var(--blue);
-    }
-    .cursor-follower {
-      width: 32px; height: 32px;
-      border: 1.5px solid rgba(0,212,255,0.4);
-      transition: left 0.12s var(--ease), top 0.12s var(--ease), width 0.3s var(--ease), height 0.3s var(--ease), border-color 0.3s;
-    }
-    .cursor.cursor-hover { transform: translate(-50%, -50%) scale(2); background: var(--purple); }
-    .cursor-hover ~ .cursor-follower { width: 50px; height: 50px; border-color: rgba(123,47,255,0.4); }
-    @media (max-width: 768px) { .cursor, .cursor-follower { display: none; } }
+        nav a:hover {
+            color: #00d4ff;
+        }
 
-    .loader {
-      position: fixed; inset: 0; z-index: 9000;
-      background: var(--bg-0);
-      display: flex; align-items: center; justify-content: center;
-      transition: opacity 0.6s var(--ease), visibility 0.6s;
-    }
-    .loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-    .loader-inner { text-align: center; }
-    .loader-logo {
-      font-family: var(--font-head);
-      font-size: 3rem; font-weight: 800;
-      background: linear-gradient(135deg, var(--blue), var(--purple));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      margin-bottom: 2rem;
-      animation: logoPulse 1.2s ease-in-out infinite;
-    }
-    @keyframes logoPulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
-    .loader-bar {
-      width: 200px; height: 2px;
-      background: rgba(255,255,255,0.06);
-      border-radius: 2px;
-      overflow: hidden; margin: 0 auto 1rem;
-    }
-    .loader-progress {
-      height: 100%; width: 0;
-      background: linear-gradient(90deg, var(--blue), var(--purple));
-      border-radius: 2px;
-      transition: width 0.1s linear;
-    }
-    .loader-text { font-size: 0.75rem; color: var(--text-3); letter-spacing: 3px; text-transform: uppercase; }
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 2rem 50px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(0, 212, 255, 0.05) 0%, transparent 100%);
+        }
 
-    .navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      height: 72px;
-      display: flex; align-items: center;
-      padding: 0 2rem;
-      background: transparent;
-      transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s;
-      border-bottom: 1px solid transparent;
-    }
-    .navbar.scrolled {
-      background: rgba(6, 9, 18, 0.92);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border-bottom-color: var(--glass-border);
-      box-shadow: 0 4px 40px rgba(0,0,0,0.5);
-    }
-    .nav-container {
-      max-width: var(--max-w); width: 100%; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .logo {
-      font-family: var(--font-head);
-      font-size: 1.3rem; font-weight: 700;
-      letter-spacing: 1px;
-    }
-    .logo-bracket { color: var(--blue); font-weight: 300; }
-    .logo-name {
-      background: linear-gradient(135deg, var(--blue), var(--purple));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      font-weight: 800;
-    }
-    .nav-links { display: flex; align-items: center; gap: 2rem; }
-    .nav-item {
-      font-size: 0.875rem; font-weight: 500;
-      color: var(--text-2);
-      position: relative; padding-bottom: 2px;
-      transition: color 0.25s;
-    }
-    .nav-item::after {
-      content: '';
-      position: absolute; bottom: 0; left: 0;
-      width: 0; height: 1.5px;
-      background: linear-gradient(90deg, var(--blue), var(--purple));
-      transition: width 0.3s var(--ease);
-    }
-    .nav-item:hover, .nav-item.active { color: var(--text-1); }
-    .nav-item:hover::after, .nav-item.active::after { width: 100%; }
-    .nav-cta {
-      font-size: 0.85rem; font-weight: 600;
-      padding: 9px 22px;
-      background: linear-gradient(135deg, var(--blue), var(--purple));
-      border-radius: 50px;
-      color: #fff;
-      box-shadow: 0 4px 20px rgba(0,212,255,0.25);
-      transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
-    }
-    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,212,255,0.4); }
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00d4ff, #7b2fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-    .reveal-up { opacity:0; transform:translateY(40px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
-    .reveal-left { opacity:0; transform:translateX(-50px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
-    .reveal-right { opacity:0; transform:translateX(50px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
-    .reveal-up.visible, .reveal-left.visible, .reveal-right.visible { opacity:1; transform: none; }
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #8892b0;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
 
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex; align-items: center;
-      padding: 100px 2rem 80px;
-      overflow: hidden;
-    }
-    .neural-canvas {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      z-index: 0; opacity: 0.7;
-    }
-    .hero-noise {
-      position: absolute; inset: 0; z-index: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      opacity: 0.4;
-    }
-    .hero-container {
-      position: relative; z-index: 1;
-      max-width: var(--max-w); width: 100%; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 4rem; align-items: center;
-    }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-    .section { padding: 110px 2rem; }
-    .section-alt { background: var(--bg-1); }
-    .container { max-width: var(--max-w); margin: 0 auto; }
+        .btn {
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
 
-    .footer { background: var(--bg-0); padding: 4rem 2rem 2rem; text-align: center; }
-  </style>
+        .btn-primary {
+            background: linear-gradient(135deg, #00d4ff, #7b2fff);
+            color: white;
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.5);
+        }
+
+        .btn-secondary {
+            border: 2px solid #00d4ff;
+            color: #00d4ff;
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #f0f2ff;
+        }
+
+        section p {
+            color: #8892b0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .section-alt {
+            background: rgba(10, 14, 30, 0.8);
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: rgba(13, 18, 37, 0.6);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+        }
+
+        .card h3 {
+            color: #00d4ff;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: #8892b0;
+            font-size: 0.95rem;
+        }
+
+        /* CONTACT FORM */
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #f0f2ff;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(13, 18, 37, 0.6);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            border-radius: 8px;
+            color: #f0f2ff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: rgba(0, 212, 255, 0.5);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: rgba(6, 9, 18, 0.8);
+            border-top: 1px solid rgba(0, 212, 255, 0.1);
+            padding: 2rem;
+            text-align: center;
+            color: #8892b0;
+            font-size: 0.9rem;
+        }
+
+        .socials {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .socials a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .socials a:hover {
+            color: #7b2fff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            section {
+                padding: 50px 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<!-- CURSOR -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="cursorFollower"></div>
-
-<!-- LOADER -->
-<div class="loader" id="loader">
-  <div class="loader-inner">
-    <div class="loader-logo">AY</div>
-    <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
-    <span class="loader-text">Initializing</span>
-  </div>
-</div>
-
 <!-- NAVBAR -->
-<header class="navbar" id="navbar">
-  <div class="nav-container">
-    <a href="#home" class="logo">
-      <span class="logo-bracket">&lt;</span>
-      <span class="logo-name">AY</span>
-      <span class="logo-bracket">/&gt;</span>
-    </a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#about" class="nav-item" data-text="About">About</a>
-      <a href="#expertise" class="nav-item" data-text="Expertise">Expertise</a>
-      <a href="#stack" class="nav-item" data-text="Stack">Stack</a>
-      <a href="#projects" class="nav-item" data-text="Projects">Projects</a>
-      <a href="#certifications" class="nav-item" data-text="Certs">Certs</a>
-      <a href="#contact" class="nav-cta">Hire Me</a>
-    </nav>
-  </div>
-</header>
+<nav>
+    <a href="#home" class="logo">&lt;AY/&gt;</a>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <canvas class="neural-canvas" id="neuralCanvas" aria-hidden="true"></canvas>
-  <div class="hero-noise"></div>
-  <div class="hero-container">
-    <div class="hero-left">
-      <h1>Building the Intelligence of Tomorrow</h1>
-      <p>AI & ML Engineer Scientist specializing in scalable machine learning systems and production-grade intelligent pipelines.</p>
-      <div>
-        <a href="#projects" class="btn-hero-primary">Explore Projects</a>
-        <a href="#contact" class="btn-hero-ghost">Get In Touch</a>
-      </div>
+    <div class="hero-content">
+        <h1>Building the Intelligence of Tomorrow</h1>
+        <p>AI & ML Engineer Scientist specializing in scalable machine learning systems, deep neural architectures, and production-grade intelligent pipelines.</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">Explore Projects</button>
+            <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section" id="about">
-  <div class="container">
-    <h2>Turning Data Into Intelligence</h2>
+<section id="about">
+    <h2>Who I Am</h2>
     <p>I'm an AI & ML Engineer Scientist passionate about building intelligent systems that solve real-world problems at scale. From designing neural network architectures to deploying production ML pipelines, I bridge the gap between research and engineering.</p>
-  </div>
+    <p>My work spans computer vision, natural language processing, distributed databases, and large-scale data analytics — always with a focus on measurable impact.</p>
 </section>
 
 <!-- EXPERTISE -->
-<section class="section section-alt" id="expertise">
-  <div class="container">
+<section class="section-alt" id="expertise">
     <h2>Core Expertise</h2>
     <p>Deep technical specializations powering intelligent, scalable solutions.</p>
-  </div>
-</section>
-
-<!-- TECH STACK -->
-<section class="section" id="stack">
-  <div class="container">
-    <h2>Technical Stack</h2>
-    <p>The technologies I deploy to build, train, and scale intelligent systems.</p>
-  </div>
+    <div class="grid">
+        <div class="card">
+            <h3>🤖 AI</h3>
+            <p>Neural network architectures and deep learning frameworks for production deployment.</p>
+        </div>
+        <div class="card">
+            <h3>🧠 Machine Learning</h3>
+            <p>Supervised and unsupervised learning, ensemble methods, and feature engineering.</p>
+        </div>
+        <div class="card">
+            <h3>📊 Data Analytics</h3>
+            <p>Statistical analysis, predictive modeling, and insight extraction from complex datasets.</p>
+        </div>
+        <div class="card">
+            <h3>🗄️ Databases</h3>
+            <p>SQL, NoSQL, MongoDB, Cassandra, PostgreSQL, Redis for scalable data architecture.</p>
+        </div>
+    </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section section-alt" id="projects">
-  <div class="container">
-    <h2>Selected Projects</h2>
-    <p>Real-world AI/ML systems engineered for performance, scale, and measurable impact.</p>
-  </div>
+<section id="projects">
+    <h2>Featured Projects</h2>
+    <p>Real-world AI/ML systems engineered for performance and measurable impact.</p>
+    <div class="grid">
+        <div class="card">
+            <h3>🛡️ Defence AI Surveillance</h3>
+            <p>Real-time intrusion detection using computer vision and object detection from CCTV feeds.</p>
+        </div>
+        <div class="card">
+            <h3>🛒 Recommendation System</h3>
+            <p>Hybrid collaborative filtering with neural embeddings for e-commerce personalization.</p>
+        </div>
+        <div class="card">
+            <h3>🏥 Healthcare Analytics</h3>
+            <p>Gradient boosting ensemble pipelines for patient readmission risk prediction.</p>
+        </div>
+        <div class="card">
+            <h3>💬 NLP Engine</h3>
+            <p>Fine-tuned BERT with Kafka streaming for real-time sentiment tracking at scale.</p>
+        </div>
+    </div>
 </section>
 
 <!-- CERTIFICATIONS -->
-<section class="section" id="certifications">
-  <div class="container">
-    <h2>Certifications & Achievements</h2>
-    <p>Verified credentials from globally recognised institutions in AI and data science.</p>
-  </div>
+<section class="section-alt" id="certs">
+    <h2>Certifications</h2>
+    <p>Verified credentials from globally recognized institutions.</p>
+    <div class="grid">
+        <div class="card">
+            <h3>🧠 Generative AI</h3>
+            <p>IBM SkillsBuild: From Prompt to Production (2026)</p>
+        </div>
+        <div class="card">
+            <h3>🤖 AI Agent</h3>
+            <p>IBM SkillsBuild: Build an AI Agent (2025)</p>
+        </div>
+        <div class="card">
+            <h3>🎓 AI Fundamentals</h3>
+            <p>IBM Artificial Intelligence Fundamentals (2024)</p>
+        </div>
+        <div class="card">
+            <h3>🏅 AI Skills Passport</h3>
+            <p>EY & Microsoft: Applied AI Skills (2024)</p>
+        </div>
+    </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section section-alt" id="contact">
-  <div class="container">
+<section id="contact">
     <h2>Ready to Build Together?</h2>
     <p>Open to engineering and research opportunities in AI, ML, and data systems.</p>
-  </div>
+    
+    <div class="contact-form">
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" value="ankityadav.mtmulund@gmail.com" readonly>
+        </div>
+        <div class="form-group">
+            <label>Phone</label>
+            <input type="text" value="Available on LinkedIn" readonly>
+        </div>
+        <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Your message here..." readonly>Contact me through email or LinkedIn for opportunities!</textarea>
+        </div>
+    </div>
+
+    <div class="socials">
+        <a href="https://github.com/AnkitYadav3812" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/ankit-yadav-67767a38b" target="_blank">LinkedIn</a>
+        <a href="mailto:ankityadav.mtmulund@gmail.com">Email</a>
+    </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <p>© 2026 Ankit Yadav — AI & ML Engineer Scientist</p>
+<footer>
+    <p>© 2026 Ankit Yadav — AI & ML Engineer Scientist</p>
+    <p>Building intelligent systems that power the future.</p>
 </footer>
 
 <script>
-// Initialize EmailJS
-let emailjsReady = false;
-emailjs.init('NBngkkQgL5MrJA0Kx').then(() => {
-  emailjsReady = true;
-  console.log('EmailJS initialized');
-}).catch(err => {
-  console.error('EmailJS init failed:', err);
-});
-
-// Loader - Remove after page loads
-window.addEventListener('load', () => {
-  const progress = document.getElementById('loaderProgress');
-  const loader = document.getElementById('loader');
-  let w = 0;
-  
-  const iv = setInterval(() => {
-    w += Math.random() * 25;
-    if (w >= 100) w = 100;
-    progress.style.width = w + '%';
-    
-    if (w === 100) {
-      clearInterval(iv);
-      setTimeout(() => {
-        loader.classList.add('hidden');
-      }, 300);
-    }
-  }, 100);
-});
-
-// Custom Cursor
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('cursorFollower');
-
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-  
-  setTimeout(() => {
-    follower.style.left = e.clientX + 'px';
-    follower.style.top = e.clientY + 'px';
-  }, 80);
-});
-
-document.querySelectorAll('a, button').forEach(el => {
-  el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
-  el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
-});
-
-// Neural Canvas Animation
-const canvas = document.getElementById('neuralCanvas');
-const ctx = canvas.getContext('2d');
-let nodes = [], W, H;
-
-function resize() {
-  W = canvas.width = canvas.offsetWidth;
-  H = canvas.height = canvas.offsetHeight;
-  
-  if (nodes.length === 0) {
-    for (let i = 0; i < 50; i++) {
-      nodes.push({
-        x: Math.random() * W,
-        y: Math.random() * H,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        r: Math.random() * 2 + 1
-      });
-    }
-  }
-}
-
-resize();
-window.addEventListener('resize', () => {
-  clearTimeout(window.resizeTimeout);
-  window.resizeTimeout = setTimeout(resize, 250);
-});
-
-function drawNeural() {
-  ctx.clearRect(0, 0, W, H);
-  
-  nodes.forEach(n => {
-    n.x += n.vx;
-    n.y += n.vy;
-    
-    if (n.x < 0 || n.x > W) n.vx *= -1;
-    if (n.y < 0 || n.y > H) n.vy *= -1;
-    
-    ctx.beginPath();
-    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(0,212,255,0.5)';
-    ctx.fill();
-  });
-  
-  nodes.forEach((a, i) => {
-    nodes.slice(i + 1).forEach(b => {
-      const dx = a.x - b.x, dy = a.y - b.y;
-      const dist = Math.sqrt(dx*dx + dy*dy);
-      
-      if (dist < 120) {
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
-        ctx.strokeStyle = `rgba(0,212,255,${0.12 * (1 - dist / 120)})`;
-        ctx.lineWidth = 0.6;
-        ctx.stroke();
-      }
-    });
-  });
-  
-  requestAnimationFrame(drawNeural);
-}
-
-drawNeural();
-
-// Navbar scroll effect
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-});
-
-console.log('Portfolio loaded successfully!');
+    console.log('Portfolio loaded successfully!');
 </script>
 
 </body>
