@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <meta name="description" content="Ankit Yadav — AI & ML Engineer Scientist. Building scalable ML systems, intelligent solutions, and production-grade pipelines."/>
   <meta name="keywords" content="Ankit Yadav, AI Engineer, ML Scientist, Machine Learning, Deep Learning, TensorFlow, PyTorch, Neural Networks"/>
   <meta property="og:title" content="Ankit Yadav | AI & ML Engineer Scientist"/>
@@ -15,7 +15,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>emailjs.init('NBngkkQgL5MrJA0Kx');</script>
+  <style>
+    /* Fallback styles in case style.css fails to load */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0a0e27; color: #e0e0e0; }
+  </style>
 </head>
 <body>
 
@@ -48,7 +52,7 @@
       <a href="#certifications" class="nav-item" data-text="Certs">Certs</a>
       <a href="#contact" class="nav-cta">Hire Me</a>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -56,7 +60,7 @@
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <canvas class="neural-canvas" id="neuralCanvas"></canvas>
+  <canvas class="neural-canvas" id="neuralCanvas" aria-hidden="true"></canvas>
   <div class="hero-noise"></div>
   <div class="hero-container">
     <div class="hero-left">
@@ -75,12 +79,12 @@
       </p>
       <div class="hero-meta reveal-up">
         <div class="meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Mumbai, India
         </div>
         <span class="meta-sep">·</span>
         <div class="meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           Available Now
         </div>
       </div>
@@ -88,20 +92,20 @@
         <a href="#projects" class="btn-hero-primary">
           <span>Explore Projects</span>
           <div class="btn-arrow">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
         </a>
         <a href="#contact" class="btn-hero-ghost">Get In Touch</a>
       </div>
       <div class="hero-socials reveal-up">
-        <a href="https://github.com/AnkitYadav3812" target="_blank" class="social-icon" aria-label="GitHub">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <a href="https://github.com/AnkitYadav3812" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/ankit-yadav-67767a38b" target="_blank" class="social-icon" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <a href="https://www.linkedin.com/in/ankit-yadav-67767a38b" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <a href="mailto:ankityadav.mtmulund@gmail.com" class="social-icon" aria-label="Email">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:ankityadav.mtmulund@gmail.com" class="social-icon" aria-label="Send Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </a>
       </div>
     </div>
@@ -459,8 +463,8 @@
             <div class="pf-metric"><span class="pf-mval">Auto</span><span class="pf-mkey">Event Logging</span></div>
             <div class="pf-metric"><span class="pf-mval">24/7</span><span class="pf-mkey">Surveillance</span></div>
           </div>
-          <a href="https://github.com/AnkitYadav3812/defence-ai-surveillance" class="pf-link" target="_blank">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <a href="https://github.com/AnkitYadav3812/defence-ai-surveillance" class="pf-link" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             View on GitHub
           </a>
         </div>
@@ -544,46 +548,47 @@
 
       <!-- IBM Build an AI Agent — Hero Cert -->
       <div class="cert-hero reveal-up">
-  <div class="ch-glow"></div>
+        <div class="ch-glow"></div>
 
-  <div class="ch-left">
-    <div class="ch-badge"><span>🧠</span></div>
-    <div class="ch-ribbon">New</div>
-  </div>
+        <div class="ch-left">
+          <div class="ch-badge"><span>🧠</span></div>
+          <div class="ch-ribbon">New</div>
+        </div>
 
-  <div class="ch-body">
-    <div class="ch-meta">
-      <span class="ch-issuer ibm-badge">IBM SkillsBuild + CSRBOX</span>
-      <span class="ch-year">2026</span>
-    </div>
+        <div class="ch-body">
+          <div class="ch-meta">
+            <span class="ch-issuer ibm-badge">IBM SkillsBuild + CSRBOX</span>
+            <span class="ch-year">2026</span>
+          </div>
 
-    <h3>Generative AI: From Prompt to Production</h3>
+          <h3>Generative AI: From Prompt to Production</h3>
 
-    <p>
-      Completed a 2-week intensive bootcamp covering end-to-end generative AI systems,
-      from prompt engineering to production deployment, including LLM workflows,
-      agent pipelines, and real-world AI applications.
-    </p>
+          <p>
+            Completed a 2-week intensive bootcamp covering end-to-end generative AI systems,
+            from prompt engineering to production deployment, including LLM workflows,
+            agent pipelines, and real-world AI applications.
+          </p>
 
-    <div class="ch-skills">
-      <span>Generative AI</span>
-      <span>Prompt Engineering</span>
-      <span>LLMs</span>
-      <span>AI Deployment</span>
-    </div>
+          <div class="ch-skills">
+            <span>Generative AI</span>
+            <span>Prompt Engineering</span>
+            <span>LLMs</span>
+            <span>AI Deployment</span>
+          </div>
 
-    <a href="ankit-yadav-certificate.pdf" class="cc-link" target="_blank">
-      View Certificate
-    </a>
-  </div>
+          <a href="./certificates/generative-ai-prompt-to-production.pdf" class="cc-link" target="_blank" rel="noopener noreferrer" download>
+            View Certificate
+          </a>
+        </div>
 
-  <div class="ch-right">
-    <div class="ch-visual">
-      <div class="ibm-logo-big">AI</div>
-      <div class="ibm-sb">GenAI</div>
-    </div>
-  </div>
-</div>
+        <div class="ch-right">
+          <div class="ch-visual">
+            <div class="ibm-logo-big">AI</div>
+            <div class="ibm-sb">GenAI</div>
+          </div>
+        </div>
+      </div>
+
       <div class="cert-hero reveal-up">
         <div class="ch-glow"></div>
         <div class="ch-left">
@@ -644,8 +649,8 @@
             </div>
             <h4>Digital Productivity with AI</h4>
             <p>AI tools and automation for enhanced digital productivity in professional workflows.</p>
-            <a href="Certificate_2574574_37_540nc.pdf" class="cc-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <a href="./certificates/digital-productivity-with-ai.pdf" class="cc-link" target="_blank" rel="noopener noreferrer" download>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
               Download
             </a>
           </div>
@@ -660,8 +665,8 @@
             </div>
             <h4>IBM SkillsBuild Winter Certification 2025</h4>
             <p>Data Analytics & Business Intelligence Lab — IBM SkillsBuild platform, powered by CSRBOX.</p>
-            <a href="DA WCP 2025 - Certificate.pdf" class="cc-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <a href="./certificates/ibm-skillsbuild-winter-2025-data-analytics.pdf" class="cc-link" target="_blank" rel="noopener noreferrer" download>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
               Download
             </a>
           </div>
@@ -683,25 +688,25 @@
         <div class="contact-info">
           <a href="mailto:ankityadav.mtmulund@gmail.com" class="ci-row">
             <div class="ci-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div>
               <span class="ci-label">Email</span>
               <span class="ci-val">ankityadav.mtmulund@gmail.com</span>
             </div>
           </a>
-          <a href="https://github.com/AnkitYadav3812" target="_blank" class="ci-row">
+          <a href="https://github.com/AnkitYadav3812" target="_blank" rel="noopener noreferrer" class="ci-row">
             <div class="ci-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             </div>
             <div>
               <span class="ci-label">GitHub</span>
               <span class="ci-val">AnkitYadav3812</span>
             </div>
           </a>
-          <a href="https://www.linkedin.com/in/ankit-yadav-67767a38b" target="_blank" class="ci-row">
+          <a href="https://www.linkedin.com/in/ankit-yadav-67767a38b" target="_blank" rel="noopener noreferrer" class="ci-row">
             <div class="ci-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </div>
             <div>
               <span class="ci-label">LinkedIn</span>
@@ -715,34 +720,34 @@
         <div class="contact-card">
           <div class="cc-glow"></div>
           <h4>Send a Message</h4>
-          <div class="form-alert form-success" id="formSuccess">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <div class="form-alert form-success" id="formSuccess" role="status" aria-live="polite">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             Message sent successfully! I'll get back to you soon.
           </div>
-          <div class="form-alert form-error" id="formError">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div class="form-alert form-error" id="formError" role="status" aria-live="polite">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             Something went wrong. Please try again or email directly.
           </div>
           <form id="contactForm" novalidate>
             <div class="form-group">
               <label for="from_name">Your Name</label>
-              <input type="text" id="from_name" name="from_name" placeholder="John Doe" class="form-input" required/>
-              <span class="form-err-msg" id="nameErr">Please enter your name.</span>
+              <input type="text" id="from_name" name="from_name" placeholder="John Doe" class="form-input" required aria-describedby="nameErr"/>
+              <span class="form-err-msg" id="nameErr" role="alert">Please enter your name.</span>
             </div>
             <div class="form-group">
               <label for="reply_to">Email Address</label>
-              <input type="email" id="reply_to" name="reply_to" placeholder="john@example.com" class="form-input" required/>
-              <span class="form-err-msg" id="emailErr">Please enter a valid email.</span>
+              <input type="email" id="reply_to" name="reply_to" placeholder="john@example.com" class="form-input" required aria-describedby="emailErr"/>
+              <span class="form-err-msg" id="emailErr" role="alert">Please enter a valid email.</span>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="I'd like to discuss an AI/ML opportunity..." class="form-textarea" rows="4" required></textarea>
-              <span class="form-err-msg" id="msgErr">Please enter a message.</span>
+              <textarea id="message" name="message" placeholder="I'd like to discuss an AI/ML opportunity..." class="form-textarea" rows="4" required aria-describedby="msgErr"></textarea>
+              <span class="form-err-msg" id="msgErr" role="alert">Please enter a message.</span>
             </div>
-            <button type="submit" class="form-btn" id="submitBtn">
+            <button type="submit" class="form-btn" id="submitBtn" aria-busy="false">
               <span id="btnText">Send Message</span>
-              <div class="btn-spinner" id="btnSpinner"></div>
-              <svg id="btnIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z"/></svg>
+              <div class="btn-spinner" id="btnSpinner" aria-hidden="true"></div>
+              <svg id="btnIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z"/></svg>
             </button>
           </form>
         </div>
@@ -759,9 +764,9 @@
     </div>
     <p>Building intelligent systems that power the future.</p>
     <div class="ft-socials">
-      <a href="https://github.com/AnkitYadav3812" target="_blank">GitHub</a>
+      <a href="https://github.com/AnkitYadav3812" target="_blank" rel="noopener noreferrer">GitHub</a>
       <span>·</span>
-      <a href="https://www.linkedin.com/in/ankit-yadav-67767a38b" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/ankit-yadav-67767a38b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <span>·</span>
       <a href="mailto:ankityadav.mtmulund@gmail.com">Email</a>
     </div>
@@ -773,6 +778,17 @@
 </footer>
 
 <script>
+// ══════════════════════════════════════════════════════════════════════════════
+// EMAIL.JS INITIALIZATION WITH ERROR HANDLING
+// ══════════════════════════════════════════════════════════════════════════════
+let emailjsReady = false;
+emailjs.init('NBngkkQgL5MrJA0Kx').then(() => {
+  emailjsReady = true;
+  console.log('EmailJS initialized successfully');
+}).catch(err => {
+  console.error('EmailJS initialization failed:', err);
+});
+
 /* ── LOADER ── */
 window.addEventListener('load', () => {
   const progress = document.getElementById('loaderProgress');
@@ -802,24 +818,45 @@ document.querySelectorAll('a, button, .proj-card, .exp-card, .cert-card').forEac
   el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
 });
 
-/* ── NEURAL CANVAS ── */
+/* ── NEURAL CANVAS WITH PERFORMANCE OPTIMIZATION ── */
 const canvas = document.getElementById('neuralCanvas');
 const ctx = canvas.getContext('2d');
 let nodes = [], W, H;
+let shouldAnimate = true;
+
+// Check for prefers-reduced-motion
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (prefersReducedMotion) {
+  // Disable animation for accessibility
+  canvas.style.display = 'none';
+  shouldAnimate = false;
+}
+
 function resize() {
   W = canvas.width = canvas.offsetWidth;
   H = canvas.height = canvas.offsetHeight;
+  // Limit nodes on smaller screens for performance
+  const nodeCount = window.innerWidth < 768 ? 30 : 60;
+  if (nodes.length === 0) {
+    for (let i = 0; i < nodeCount; i++) {
+      nodes.push({
+        x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4,
+        r: Math.random() * 2 + 1
+      });
+    }
+  }
 }
 resize();
-window.addEventListener('resize', resize);
-for (let i = 0; i < 60; i++) {
-  nodes.push({
-    x: Math.random() * W, y: Math.random() * H,
-    vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4,
-    r: Math.random() * 2 + 1
-  });
-}
+
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(resize, 250);
+});
+
 function drawNeural() {
+  if (!shouldAnimate) return;
   ctx.clearRect(0, 0, W, H);
   nodes.forEach(n => {
     n.x += n.vx; n.y += n.vy;
@@ -889,19 +926,20 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 revealEls.forEach(el => revealObserver.observe(el));
 
-/* ── COUNTERS ── */
+/* ── COUNTERS WITH REDUCED MOTION SUPPORT ── */
 const counters = document.querySelectorAll('.counter');
 const cObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       const target = +e.target.dataset.target;
       let current = 0;
-      const step = target / 40;
+      const step = target / (prefersReducedMotion ? 1 : 40);
+      const interval = prefersReducedMotion ? 0 : 40;
       const timer = setInterval(() => {
         current += step;
         if (current >= target) { current = target; clearInterval(timer); }
         e.target.textContent = Math.floor(current) + '+';
-      }, 40);
+      }, interval);
       cObserver.unobserve(e.target);
     }
   });
@@ -910,86 +948,4 @@ counters.forEach(c => cObserver.observe(c));
 
 /* ── SKILL BARS ── */
 const bars = document.querySelectorAll('.si-fill');
-const bObserver = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.width = e.target.style.getPropertyValue('--w');
-      bObserver.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.3 });
-bars.forEach(b => bObserver.observe(b));
-
-/* ── CONTACT FORM ── */
-const contactForm = document.getElementById('contactForm');
-const submitBtn   = document.getElementById('submitBtn');
-const btnText     = document.getElementById('btnText');
-const btnSpinner  = document.getElementById('btnSpinner');
-const btnIcon     = document.getElementById('btnIcon');
-const formSuccess = document.getElementById('formSuccess');
-const formError   = document.getElementById('formError');
-
-function hideAlerts() {
-  formSuccess.style.display = 'none';
-  formError.style.display   = 'none';
-}
-
-function setLoading(isLoading) {
-  submitBtn.disabled       = isLoading;
-  btnText.textContent      = isLoading ? 'Sending...' : 'Send Message';
-  btnSpinner.style.display = isLoading ? 'block' : 'none';
-  btnIcon.style.display    = isLoading ? 'none'  : 'block';
-}
-
-function validateField(id, errId, condition) {
-  const el  = document.getElementById(id);
-  const err = document.getElementById(errId);
-  if (condition(el.value.trim())) {
-    el.classList.add('input-error');
-    err.style.display = 'block';
-    return false;
-  }
-  el.classList.remove('input-error');
-  err.style.display = 'none';
-  return true;
-}
-
-contactForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  hideAlerts();
-
-  const nameOk  = validateField('from_name', 'nameErr',  v => v === '');
-  const emailOk = validateField('reply_to',  'emailErr', v => !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
-  const msgOk   = validateField('message',   'msgErr',   v => v === '');
-
-  if (!nameOk || !emailOk || !msgOk) return;
-
-  setLoading(true);
-
-  try {
-    await emailjs.sendForm(
-      'service_gjcufxd',
-      'template_4hpoop4',
-      contactForm
-    );
-    formSuccess.style.display = 'flex';
-    contactForm.reset();
-  } catch (err) {
-    console.error('EmailJS error:', err);
-    formError.style.display = 'flex';
-  } finally {
-    setLoading(false);
-  }
-});
-
-['from_name', 'reply_to', 'message'].forEach(id => {
-  document.getElementById(id).addEventListener('blur', () => {
-    if (id === 'from_name') validateField('from_name', 'nameErr',  v => v === '');
-    if (id === 'reply_to')  validateField('reply_to',  'emailErr', v => !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
-    if (id === 'message')   validateField('message',   'msgErr',   v => v === '');
-  });
-});
-</script>
-
-</body>
-</html>
+const bOb
